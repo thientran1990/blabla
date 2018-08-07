@@ -1,0 +1,280 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', '-g', 'heroku' ]
+2 info using npm@2.15.11
+3 info using node@v4.8.4
+4 verbose install initial load of /usr/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/lib/package.json
+6 silly cache add args [ 'heroku', null ]
+7 verbose cache add spec heroku
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'heroku',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'heroku',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed heroku@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for heroku
+11 info addNameTag [ 'heroku', 'latest' ]
+12 silly mapToRegistry name heroku
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry data Result {
+15 silly mapToRegistry   raw: 'heroku',
+15 silly mapToRegistry   scope: null,
+15 silly mapToRegistry   name: 'heroku',
+15 silly mapToRegistry   rawSpec: '',
+15 silly mapToRegistry   spec: 'latest',
+15 silly mapToRegistry   type: 'tag' }
+16 silly mapToRegistry uri https://registry.npmjs.org/heroku
+17 verbose addNameTag registry:https://registry.npmjs.org/heroku not in flight; fetching
+18 verbose request uri https://registry.npmjs.org/heroku
+19 verbose request no auth needed
+20 info attempt registry request try #1 at 1:36:19 PM
+21 verbose request id ddbe11b03a3ba5f7
+22 http request GET https://registry.npmjs.org/heroku
+23 http 200 https://registry.npmjs.org/heroku
+24 verbose headers { date: 'Tue, 07 Aug 2018 06:36:20 GMT',
+24 verbose headers   'content-type': 'application/json; charset=UTF-8',
+24 verbose headers   'transfer-encoding': 'chunked',
+24 verbose headers   connection: 'keep-alive',
+24 verbose headers   'set-cookie': [ '__cfduid=deb068657349b8eb82c7d2c13093d40091533623780; expires=Wed, 07-Aug-19 06:36:20 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+24 verbose headers   'cache-control': 'max-age=300',
+24 verbose headers   'cf-cache-status': 'HIT',
+24 verbose headers   'cf-ray': '4467ba7108de8532-HKG',
+24 verbose headers   etag: 'W/"a6d73fd0f03bbbe5d68860b0e67587d0"',
+24 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+24 verbose headers   'last-modified': 'Mon, 30 Jul 2018 16:33:51 GMT',
+24 verbose headers   vary: 'accept-encoding, accept',
+24 verbose headers   server: 'cloudflare',
+24 verbose headers   'content-encoding': 'gzip' }
+25 silly get cb [ 200,
+25 silly get   { date: 'Tue, 07 Aug 2018 06:36:20 GMT',
+25 silly get     'content-type': 'application/json; charset=UTF-8',
+25 silly get     'transfer-encoding': 'chunked',
+25 silly get     connection: 'keep-alive',
+25 silly get     'set-cookie': [ '__cfduid=deb068657349b8eb82c7d2c13093d40091533623780; expires=Wed, 07-Aug-19 06:36:20 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+25 silly get     'cache-control': 'max-age=300',
+25 silly get     'cf-cache-status': 'HIT',
+25 silly get     'cf-ray': '4467ba7108de8532-HKG',
+25 silly get     etag: 'W/"a6d73fd0f03bbbe5d68860b0e67587d0"',
+25 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+25 silly get     'last-modified': 'Mon, 30 Jul 2018 16:33:51 GMT',
+25 silly get     vary: 'accept-encoding, accept',
+25 silly get     server: 'cloudflare',
+25 silly get     'content-encoding': 'gzip' } ]
+26 verbose get saving heroku to /home/thientran/.npm/registry.npmjs.org/heroku/.cache.json
+27 verbose correctMkdir /home/thientran/.npm correctMkdir not in flight; initializing
+28 verbose makeDirectory /home/thientran/.npm creation not in flight; initializing
+29 silly makeDirectory /home/thientran/.npm uid: 1000 gid: 1000
+30 silly addNameTag next cb for heroku with tag latest
+31 silly addNamed heroku@7.7.8
+32 verbose addNamed "7.7.8" is a plain semver version for heroku
+33 silly mapToRegistry name heroku
+34 silly mapToRegistry using default registry
+35 silly mapToRegistry registry https://registry.npmjs.org/
+36 silly mapToRegistry data Result {
+36 silly mapToRegistry   raw: 'heroku',
+36 silly mapToRegistry   scope: null,
+36 silly mapToRegistry   name: 'heroku',
+36 silly mapToRegistry   rawSpec: '',
+36 silly mapToRegistry   spec: 'latest',
+36 silly mapToRegistry   type: 'tag' }
+37 silly mapToRegistry uri https://registry.npmjs.org/heroku
+38 verbose addRemoteTarball https://registry.npmjs.org/heroku/-/heroku-7.7.8.tgz not in flight; adding
+39 verbose addRemoteTarball [ 'https://registry.npmjs.org/heroku/-/heroku-7.7.8.tgz',
+39 verbose addRemoteTarball   'c12c3e3816a657ce296e00fcac3e17ab44238753' ]
+40 info retry fetch attempt 1 at 1:36:20 PM
+41 info attempt registry request try #1 at 1:36:20 PM
+42 http fetch GET https://registry.npmjs.org/heroku/-/heroku-7.7.8.tgz
+43 http fetch 200 https://registry.npmjs.org/heroku/-/heroku-7.7.8.tgz
+44 silly fetchAndShaCheck shasum c12c3e3816a657ce296e00fcac3e17ab44238753
+45 verbose addTmpTarball /tmp/npm-11147-fe8fbd0b/registry.npmjs.org/heroku/-/heroku-7.7.8.tgz not in flight; adding
+46 verbose addTmpTarball already have metadata; skipping unpack for heroku@7.7.8
+47 verbose correctMkdir /home/thientran/.npm correctMkdir not in flight; initializing
+48 silly cache afterAdd heroku@7.7.8
+49 verbose afterAdd /home/thientran/.npm/heroku/7.7.8/package/package.json not in flight; writing
+50 verbose correctMkdir /home/thientran/.npm correctMkdir not in flight; initializing
+51 verbose afterAdd /home/thientran/.npm/heroku/7.7.8/package/package.json written
+52 silly install resolved [ { name: 'heroku',
+52 silly install resolved     description: 'CLI to interact with Heroku',
+52 silly install resolved     version: '7.7.8',
+52 silly install resolved     author: { name: 'Jeff Dickey @jdxcode' },
+52 silly install resolved     bin: { heroku: './bin/run' },
+52 silly install resolved     bugs: { url: 'https://github.com/heroku/cli/issues' },
+52 silly install resolved     dependencies:
+52 silly install resolved      { '@heroku-cli/color': '1.1.9',
+52 silly install resolved        '@heroku-cli/command': '8.1.26',
+52 silly install resolved        '@heroku-cli/plugin-addons-v5': '^7.5.6',
+52 silly install resolved        '@heroku-cli/plugin-apps-v5': '^7.7.8',
+52 silly install resolved        '@heroku-cli/plugin-auth': '^7.5.9',
+52 silly install resolved        '@heroku-cli/plugin-autocomplete': '^7.7.4',
+52 silly install resolved        '@heroku-cli/plugin-certs': '^7.5.9',
+52 silly install resolved        '@heroku-cli/plugin-certs-v5': '^7.5.6',
+52 silly install resolved        '@heroku-cli/plugin-ci-v5': '^7.5.10',
+52 silly install resolved        '@heroku-cli/plugin-config': '^7.5.9',
+52 silly install resolved        '@heroku-cli/plugin-container-registry-v5': '^7.5.6',
+52 silly install resolved        '@heroku-cli/plugin-git': '^7.5.9',
+52 silly install resolved        '@heroku-cli/plugin-local-v5': '^7.5.6',
+52 silly install resolved        '@heroku-cli/plugin-oauth-v5': '^7.5.6',
+52 silly install resolved        '@heroku-cli/plugin-orgs-v5': '^7.5.6',
+52 silly install resolved        '@heroku-cli/plugin-pg-v5': '^7.7.2',
+52 silly install resolved        '@heroku-cli/plugin-pipelines-v5': '^7.7.2',
+52 silly install resolved        '@heroku-cli/plugin-ps': '^7.5.9',
+52 silly install resolved        '@heroku-cli/plugin-ps-exec': '2.3.4',
+52 silly install resolved        '@heroku-cli/plugin-redis-v5': '^7.5.6',
+52 silly install resolved        '@heroku-cli/plugin-run-v5': '^7.5.6',
+52 silly install resolved        '@heroku-cli/plugin-spaces': '^7.7.8',
+52 silly install resolved        '@heroku-cli/plugin-status': '^7.5.9',
+52 silly install resolved        '@heroku-cli/plugin-webhooks-v5': '^7.5.6',
+52 silly install resolved        '@oclif/command': '1.4.34',
+52 silly install resolved        '@oclif/config': '1.6.33',
+52 silly install resolved        '@oclif/errors': '1.1.2',
+52 silly install resolved        '@oclif/plugin-commands': '^1.1.3',
+52 silly install resolved        '@oclif/plugin-help': '2.0.5',
+52 silly install resolved        '@oclif/plugin-legacy': '1.0.18',
+52 silly install resolved        '@oclif/plugin-not-found': '1.1.4',
+52 silly install resolved        '@oclif/plugin-plugins': '1.5.4',
+52 silly install resolved        '@oclif/plugin-update': '1.2.14',
+52 silly install resolved        '@oclif/plugin-warn-if-update-available': '1.3.9',
+52 silly install resolved        '@oclif/plugin-which': '1.0.1',
+52 silly install resolved        'cli-ux': '4.7.3',
+52 silly install resolved        debug: '3.1.0',
+52 silly install resolved        execa: '0.10.0',
+52 silly install resolved        'fs-extra': '6.0.1',
+52 silly install resolved        'http-call': '5.1.4',
+52 silly install resolved        'netrc-parser': '3.1.5',
+52 silly install resolved        semver: '5.5.0',
+52 silly install resolved        tslib: '1.9.3',
+52 silly install resolved        uuid: '3.3.2' },
+52 silly install resolved     devDependencies:
+52 silly install resolved      { '@oclif/dev-cli': '^1.15.4',
+52 silly install resolved        '@oclif/test': '^1.0.9',
+52 silly install resolved        '@oclif/tslint': '^1.1.2',
+52 silly install resolved        '@types/ansi-styles': '^3.2.0',
+52 silly install resolved        '@types/chai': '^4.1.3',
+52 silly install resolved        '@types/debug': '^0.0.30',
+52 silly install resolved        '@types/execa': '^0.9.0',
+52 silly install resolved        '@types/fs-extra': '^5.0.3',
+52 silly install resolved        '@types/glob': '^5.0.35',
+52 silly install resolved        '@types/lodash': '^4.14.110',
+52 silly install resolved        '@types/mocha': '^5.2.4',
+52 silly install resolved        '@types/nock': '^9.3.0',
+52 silly install resolved        '@types/node': '^10.5.1',
+52 silly install resolved        '@types/supports-color': '^5.3.0',
+52 silly install resolved        '@types/write-json-file': '^2.2.1',
+52 silly install resolved        'aws-sdk': '^2.267.1',
+52 silly install resolved        chai: '^4.1.2',
+52 silly install resolved        lerna: '^2.11.0',
+52 silly install resolved        lodash: '^4.17.10',
+52 silly install resolved        mocha: '^5.2.0',
+52 silly install resolved        nock: '^9.3.2',
+52 silly install resolved        qqjs: '^0.3.10',
+52 silly install resolved        'read-pkg': '^4.0.1',
+52 silly install resolved        'ts-node': '^7.0.0',
+52 silly install resolved        tslint: '^5.10.0',
+52 silly install resolved        typescript: '^2.9.1' },
+52 silly install resolved     engines: { node: '>=8.3.0' },
+52 silly install resolved     files:
+52 silly install resolved      [ '/oclif.manifest.json',
+52 silly install resolved        '/bin',
+52 silly install resolved        '/lib',
+52 silly install resolved        '/npm-shrinkwrap.json',
+52 silly install resolved        '/yarn.lock' ],
+52 silly install resolved     homepage: 'https://cli.heroku.com/',
+52 silly install resolved     keywords: [ 'heroku', 'heroku-cli-plugin' ],
+52 silly install resolved     license: 'ISC',
+52 silly install resolved     main: 'lib/index.js',
+52 silly install resolved     oclif:
+52 silly install resolved      { commands: './lib/commands',
+52 silly install resolved        plugins: [Object],
+52 silly install resolved        bin: 'heroku',
+52 silly install resolved        dirname: 'heroku',
+52 silly install resolved        scope: 'heroku-cli',
+52 silly install resolved        npmRegistry: 'https://cli-npm.heroku.com',
+52 silly install resolved        macos: [Object],
+52 silly install resolved        topics: [Object],
+52 silly install resolved        hooks: [Object],
+52 silly install resolved        update: [Object],
+52 silly install resolved        aliases: [Object] },
+52 silly install resolved     repository: { type: 'git', url: 'https://github.com/heroku/cli.git' },
+52 silly install resolved     scripts:
+52 silly install resolved      { build: 'rm -rf lib && tsc',
+52 silly install resolved        postpublish: 'rm -f oclif.manifest.json',
+52 silly install resolved        posttest: 'tsc -p test --noEmit && tslint -p test -t stylish',
+52 silly install resolved        prepack: 'yarn run build && oclif-dev manifest',
+52 silly install resolved        prepublishOnly: 'yarn run prepack',
+52 silly install resolved        test: 'mocha --forbid-only "test/**/*.test.ts"',
+52 silly install resolved        version: 'oclif-dev readme --multi && git add README.md ../../docs' },
+52 silly install resolved     types: 'lib/index.d.ts',
+52 silly install resolved     licenseText: 'The ISC License (ISC)\n\nCopyright © Heroku 2017\n\nPermission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.\n\nTHE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.\n',
+52 silly install resolved     _id: 'heroku@7.7.8',
+52 silly install resolved     dist:
+52 silly install resolved      { shasum: 'c12c3e3816a657ce296e00fcac3e17ab44238753',
+52 silly install resolved        tarball: 'https://registry.npmjs.org/heroku/-/heroku-7.7.8.tgz',
+52 silly install resolved        fileCount: 38,
+52 silly install resolved        unpackedSize: 43762 },
+52 silly install resolved     maintainers: [ [Object], [Object] ],
+52 silly install resolved     _npmUser: { name: 'dickeyxxx', email: 'dickeytk+npm@gmail.com' },
+52 silly install resolved     directories: {},
+52 silly install resolved     _npmOperationalInternal:
+52 silly install resolved      { host: 's3://npm-registry-packages',
+52 silly install resolved        tmp: 'tmp/heroku_7.7.8_1532968428338_0.6732926050051473' },
+52 silly install resolved     _shasum: 'c12c3e3816a657ce296e00fcac3e17ab44238753',
+52 silly install resolved     _resolved: 'https://registry.npmjs.org/heroku/-/heroku-7.7.8.tgz',
+52 silly install resolved     _from: 'heroku@latest' } ]
+53 info install heroku@7.7.8 into /usr/lib
+54 info installOne heroku@7.7.8
+55 verbose installOne of heroku to /usr/lib not in flight; installing
+56 verbose correctMkdir /home/thientran/.npm/_locks correctMkdir not in flight; initializing
+57 verbose makeDirectory /home/thientran/.npm/_locks creation not in flight; initializing
+58 silly makeDirectory /home/thientran/.npm/_locks uid: 1000 gid: 1000
+59 verbose lock using /home/thientran/.npm/_locks/heroku-f7911f65fcc91982.lock for /usr/lib/node_modules/heroku
+60 warn engine heroku@7.7.8: wanted: {"node":">=8.3.0"} (current: {"node":"4.8.4","npm":"2.15.11"})
+61 silly install write writing heroku 7.7.8 to /usr/lib/node_modules/heroku
+62 verbose unbuild lib/node_modules/heroku
+63 silly gentlyRm /usr/lib/node_modules/heroku is being purged from base /usr
+64 verbose gentlyRm don't care about contents; nuking /usr/lib/node_modules/heroku
+65 verbose tar unpack /home/thientran/.npm/heroku/7.7.8/package.tgz
+66 verbose tar unpacking to /usr/lib/node_modules/heroku
+67 silly gentlyRm /usr/lib/node_modules/heroku is being purged
+68 verbose gentlyRm don't care about contents; nuking /usr/lib/node_modules/heroku
+69 silly gunzTarPerm modes [ '775', '664' ]
+70 error tar.unpack untar error /home/thientran/.npm/heroku/7.7.8/package.tgz
+71 verbose unlock done using /home/thientran/.npm/_locks/heroku-f7911f65fcc91982.lock for /usr/lib/node_modules/heroku
+72 verbose fstream_path /usr/lib/node_modules/heroku
+73 verbose fstream_type Directory
+74 verbose fstream_class DirWriter
+75 verbose stack Error: EACCES: permission denied, mkdir '/usr/lib/node_modules/heroku'
+75 verbose stack     at Error (native)
+76 verbose fstream_stack /usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
+76 verbose fstream_stack /usr/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
+76 verbose fstream_stack FSReqWrap.oncomplete (fs.js:82:15)
+77 verbose cwd /home/thientran/mainichispa
+78 error Linux 4.4.0-128-generic
+79 error argv "/usr/bin/nodejs" "/usr/bin/npm" "install" "-g" "heroku"
+80 error node v4.8.4
+81 error npm  v2.15.11
+82 error path /usr/lib/node_modules/heroku
+83 error code EACCES
+84 error errno -13
+85 error syscall mkdir
+86 error Error: EACCES: permission denied, mkdir '/usr/lib/node_modules/heroku'
+86 error     at Error (native)
+86 error  { [Error: EACCES: permission denied, mkdir '/usr/lib/node_modules/heroku']
+86 error   errno: -13,
+86 error   code: 'EACCES',
+86 error   syscall: 'mkdir',
+86 error   path: '/usr/lib/node_modules/heroku',
+86 error   fstream_type: 'Directory',
+86 error   fstream_path: '/usr/lib/node_modules/heroku',
+86 error   fstream_class: 'DirWriter',
+86 error   fstream_stack:
+86 error    [ '/usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
+86 error      '/usr/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
+86 error      'FSReqWrap.oncomplete (fs.js:82:15)' ] }
+87 error Please try running this command again as root/Administrator.
+88 verbose exit [ -13, true ]
+89 verbose unbuild lib/node_modules/heroku
+90 silly gentlyRm /usr/lib/node_modules/heroku is being purged from base /usr
+91 verbose gentlyRm don't care about contents; nuking /usr/lib/node_modules/heroku
