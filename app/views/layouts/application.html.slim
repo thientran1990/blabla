@@ -15,7 +15,7 @@ html lang='en'
       .container
         .header_inner
           .header_logo
-            h1 = "day la cai logo na"
+            h1 = "Mainichi Spa"
 
     .banner_top.carousel.slide data-ride="carousel" 
       .carousel-inner
@@ -40,25 +40,22 @@ html lang='en'
         span.carousel-control-next-icon
 
     #container.row
-      #left_bar.col-md-2.hidden-sm.hidden-xs
-        / .box.area
-        /   h3 Ho Chi Minh
-        /   ul
-        /     li khu1
-        /     li khu1
-        /     li khu1
-        /     li khu1
-        /     li khu1
+      #left_bar.col-lg-2.col-md-2.hidden-sm.hidden-xs
+        .box.area
+          h2 Ho Chi Minh
+          ul
+            - (0..5).each do ||
+              li khu1
 
           .
-      #main.col-lg-10.col-md-7.col-sm-8.col-xs-12
+      #main.col-lg-10.col-md-12.col-sm-12.col-xs-12
         .box.main_content
-          h3 Spa cho nay 
+          h2.title Spa o HCM 
           - (0..7).each do ||
-            .box_place.border_left.col-lg-3
+            .box_place.border_left.col-lg-3.col-sm-4.col-xs-3
               .place_img style="background-image: url(banner675x355/banner4.jpg)"
               .place_content
-                h1 Spa nao do 
+                h2 Spa  
                 .place_content
                   p = truncate("day la 1 cai spa nao do nam o dau khong biet nua ", length: 130)
 
