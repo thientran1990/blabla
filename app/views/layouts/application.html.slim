@@ -49,14 +49,33 @@ html lang='en'
 
           .
       #main.col-lg-10.col-md-12.col-sm-12.col-xs-12
-        .box.main_content
-          h2.title Spa Ho Chi Minh
-          - (0..7).each do ||
-            .box_place.border_left.col-lg-3.col-sm-4.col-xs-3
-              .box.place
-                .place_img style="background-image: url(banner675x355/banner4.jpg)"
-
-                h2.line Spa  
+        .main_content
+          h2.title Moi nhat
+          .row
+            - (0..3).each do ||
+              .box_place.col-lg-3.col-sm-4.col-xs-3
                 .place_content
-                  p = truncate("day la 1 cai spa nao do nam o dau khong biet nua ", length: 130)
-
+                  .place_img style="background-image: url(banner675x355/banner4.jpg)"
+                  .place_text
+                    h2.line Spa  
+                    p = truncate("day la 1 cai spa nao do nam o dau khong biet nua ", length: 130)
+        .main_content
+          h2.title Spa
+          .row
+            - (0..3).each do ||
+              .box_place.col-lg-3.col-sm-4.col-xs-3
+                .place_content
+                  .place_img style="background-image: url(banner675x355/banner4.jpg)"
+                  .place_text
+                    h2.line Spa  
+                    p = truncate("day la 1 cai spa nao do nam o dau khong biet nua ", length: 130)
+        .main_content
+          h2.title Salon
+          .row
+            - (0..3).each do ||
+              .box_place.col-lg-3.col-sm-4.col-xs-3
+                .place_content
+                  .place_img style="background-image: url(banner675x355/banner4.jpg)"
+                  .place_text
+                    h2.line Spa  
+                    p = truncate("day la 1 cai spa nao do nam o dau khong biet nua ", length: 130)
