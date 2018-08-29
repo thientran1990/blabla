@@ -41,41 +41,42 @@ html lang='en'
 
     #container.row
       #left_bar.col-lg-2.col-md-2.hidden-sm.hidden-xs
-        .box.area
-          h2 Ho Chi Minh
-          ul
-            - (0..5).each do ||
-              li khu1
 
-          .
+          .box.category_menu
+            h2.category_title The Loai
+            .category_menu_item
+              = link_to '' do
+                span.iconCategory.icon-home
+                span Home
+            .category_menu_item
+              = link_to '' do
+                span.iconCategory.icon-spa
+                span Spa
+            .category_menu_item
+              = link_to '' do
+                span.iconCategory.icon-salon
+                span Salon
+            .category_menu_item
+              = link_to '' do
+                span.iconCategory.icon-nail
+                span Nail
+            .category_menu_item
+              = link_to '' do
+                span.iconCategory.icon-love
+                span Love                                                
+
       #main.col-lg-10.col-md-12.col-sm-12.col-xs-12
+        = render partial: 'places/index'
         .main_content
-          h2.title Moi nhat
+          h2.title Ranking gi day 
           .row
-            - (0..3).each do ||
+            - (0..7).each do ||
               .box_place.col-lg-3.col-sm-4.col-xs-3
                 .place_content
                   .place_img style="background-image: url(banner675x355/banner4.jpg)"
                   .place_text
                     h2.line Spa  
                     p = truncate("day la 1 cai spa nao do nam o dau khong biet nua ", length: 130)
-        .main_content
-          h2.title Spa
-          .row
-            - (0..3).each do ||
-              .box_place.col-lg-3.col-sm-4.col-xs-3
-                .place_content
-                  .place_img style="background-image: url(banner675x355/banner4.jpg)"
-                  .place_text
-                    h2.line Spa  
-                    p = truncate("day la 1 cai spa nao do nam o dau khong biet nua ", length: 130)
-        .main_content
-          h2.title Salon
-          .row
-            - (0..3).each do ||
-              .box_place.col-lg-3.col-sm-4.col-xs-3
-                .place_content
-                  .place_img style="background-image: url(banner675x355/banner4.jpg)"
-                  .place_text
-                    h2.line Spa  
-                    p = truncate("day la 1 cai spa nao do nam o dau khong biet nua ", length: 130)
+
+      #footer
+

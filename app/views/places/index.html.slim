@@ -1,0 +1,10 @@
+.main_content
+  h2.title Ranking gi day 
+  .row
+    - (0..7).each do ||
+      .box_place.col-lg-3.col-sm-4.col-xs-3
+        .place_content
+          .place_img style="background-image: url(banner675x355/banner4.jpg)"
+          .place_text
+            h2.line Spa  
+            p = truncate("day la 1 cai spa nao do nam o dau khong biet nua ", length: 130)
