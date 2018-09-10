@@ -12,18 +12,19 @@ html lang='en'
     script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
   body
     header
-      .container
-        .header_inner
-          .header_logo
-            h1 = "Mainichi Spa"
+      = link_to root_path do 
+        .container
+          .header_inner
+            .header_logo
+              h1 = "Mainichi Spa"
     = render partial: "layouts/slide" if root_path?
-      
+
     #container.row
       #left_bar.col-lg-2.col-md-2.hidden-sm.hidden-xs
         .box.category_menu
-          h2.category_title The Loai
+          h2.category_title 記事
           .category_menu_item
-            = link_to '' do
+            = link_to root_path do
               span.iconCategory.icon-home
               span Home
           .category_menu_item
@@ -44,6 +45,16 @@ html lang='en'
               span Love
         .box
           h2.category_title Ho Chi Minh
+          ul
+            li Quan 1
+            li Quan 1
+            li Quan 1
+            li Quan 1
+            li Quan 1
+            li Quan 1
+            li Quan 1
+        .box
+          h2.category_title Ha Noi
           ul
             li Quan 1
             li Quan 1

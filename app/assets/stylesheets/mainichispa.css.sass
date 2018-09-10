@@ -6,6 +6,13 @@ body
   padding-top: 70px
   .pink
     color: pink
+  .line
+    border-bottom: 1px dotted #e7e7e7
+    margin: 10px 0px
+  .box_item
+    border: 2px dotted pink
+    padding: 5px
+    border-radius: 10px
   header
     height: 70px
     border-bottom: 2px solid #eee
@@ -14,6 +21,12 @@ body
     background: #fff
     width: 100%
     top: 0
+    a
+      display: block
+      color: black  
+    a:link
+      color: black  
+      text-decoration: none
     .header_inner
       padding-top: 20px
       .header_logo
@@ -49,9 +62,7 @@ body
       h4
         padding-left: 10px
         color: #959595
-    .line
-      border-bottom: 1px dotted #e7e7e7
-      margin: 5px 0px
+
 
     #left_bar
       // background-color: gray
@@ -170,6 +181,7 @@ body
             font-size: 14px
             padding-right: 10px
       .place_item
+        margin: 5px 0
         .item_img
           width: 100%
           height: 200px
