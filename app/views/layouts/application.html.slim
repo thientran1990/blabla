@@ -16,9 +16,8 @@ html lang='en'
         .header_inner
           .header_logo
             h1 = "Mainichi Spa"
-
-    = render "layouts/slide"
-
+    = render partial: "layouts/slide" if root_path?
+      
     #container.row
       #left_bar.col-lg-2.col-md-2.hidden-sm.hidden-xs
         .box.category_menu
