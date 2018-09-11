@@ -2,17 +2,37 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body
-  background-color: #f5f5f5
+  // background-color: #f5f5f5
   padding-top: 70px
   .pink
     color: pink
   .line
     border-bottom: 1px dotted #e7e7e7
     margin: 10px 0px
+  .dotted-top
+    border-top: dotted #e7e7e7
+  .dotted-right
+    border-right: dotted #e7e7e7
+  .dotted-bottom
+    border-bottom: dotted #e7e7e7
+    margin: 10px 0px
+    
+  .dotted-left
+    border-left: dotted #e7e7e7
   .box_item
     border: 2px dotted pink
     padding: 5px
     border-radius: 10px
+  a
+    display: block
+    color: black  
+  a:link
+    color: black  
+    text-decoration: none
+  .header_inner
+    padding-top: 20px
+    .header_logo
+      text-align: center
   header
     height: 70px
     border-bottom: 2px solid #eee
@@ -21,16 +41,6 @@ body
     background: #fff
     width: 100%
     top: 0
-    a
-      display: block
-      color: black  
-    a:link
-      color: black  
-      text-decoration: none
-    .header_inner
-      padding-top: 20px
-      .header_logo
-        text-align: center
 
   .banner_top
     text-align: center
@@ -42,7 +52,7 @@ body
       height: 355px
       // margin-left: 100px
   #container
-    background-color: #f5f5f5
+    // background-color: #f5f5f5
     padding-top: 20px
     margin-left: auto
     margin-right: auto
@@ -66,6 +76,7 @@ body
 
     #left_bar
       // background-color: gray
+      border-right: dotted #e7e7e7
       .category_menu
         display: block
         padding: 10px 0 10px 8px
@@ -104,8 +115,6 @@ body
             padding: 10px 0 10px 8px
             color: #666
 
-          a:link
-            text-decoration: none
 
 
           .icon-home
@@ -121,6 +130,42 @@ body
 
 
     #main
+      .topbar
+        position: relative
+        height: 33px
+        margin-top: -1px
+        margin-bottom: 10px
+        background: #fff
+        border-bottom: 2px solid #eee
+        border-top: 1px solid #eee
+        #breadcrumb 
+          overflow: hidden
+          white-space: nowrap
+          text-overflow: ellipsis
+          width: 1010px
+          margin: 0 auto
+          letter-spacing: -.4em
+          padding: 0 0 0 5px
+          li
+            display: inline-block
+            height: 32px
+            letter-spacing: normal
+            a
+              display: block
+              overflow: hidden
+              white-space: nowrap
+              text-overflow: ellipsis
+              max-width: 360px
+              height: 32px
+              padding: 0 22px 0 10px
+              background: url(https://a.mery.jp/4722d82/images/arrow_breadcrumb.90e76cbb.png) right top no-repeat
+              line-height: 32px
+              font-size: 13px
+          li:first-child 
+            a
+              padding-left: 0!important
+          span
+            margin: 0
       .title
         color: #553716
         margin-bottom: 1em
@@ -145,7 +190,7 @@ body
               padding: 10px
       //show place
       .place_info_img
-        padding-left: 0
+        padding-left: 10px
         padding-right: 0
         .place_img
           background-repeat: no-repeat

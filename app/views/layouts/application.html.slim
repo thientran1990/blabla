@@ -43,6 +43,8 @@ html lang='en'
             = link_to '' do
               span.iconCategory.icon-love
               span Love
+          .line
+          
         .box
           h2.category_title Ho Chi Minh
           ul
@@ -53,6 +55,8 @@ html lang='en'
             li Quan 1
             li Quan 1
             li Quan 1
+          .line
+
         .box
           h2.category_title Ha Noi
           ul
@@ -63,8 +67,18 @@ html lang='en'
             li Quan 1
             li Quan 1
             li Quan 1
+          .line
 
       #main.col-lg-10.col-md-12.col-sm-12.col-xs-12
+        - unless root_path?
+          .topbar
+            ul#breadcrumb
+              li
+                = link_to root_url do
+                  span MainichiSpa
+              li
+                = link_to root_url do
+                  span MainichiSpa
         = yield
                 
 
