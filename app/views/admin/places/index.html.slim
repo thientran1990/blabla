@@ -1,0 +1,11 @@
+h1 new
+= link_to "New Place", new_admin_place_path
+table.table.table-striped
+  thead
+    th JP name
+    th EN name
+  - @place.each do |place|
+    tr
+      td = place.ja_name
+      td = place.slug
+      / td.text-right= place.en_name

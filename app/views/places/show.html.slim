@@ -7,57 +7,57 @@
     /       img style="background-image: url(/banner675x355/2018817194851593.jpg)"
   .place_info.col-lg-5
     .info_title
-      h2 = "エミスパ"
-      h4 = "Emi Spa"
+      h2 = @place.ja_name
+      h4 = @place.en_name
     .line
     .info_content
       p
         span.glyphicon.glyphicon-map-marker
-        = "52 Dong Du St. Dist.1. Ho Chi Minh"
+        = @place.en_address
       p
         span.glyphicon.glyphicon-earphone
-        = "028 3939 0052"
+        = @place.tel
       p
         span.glyphicon.glyphicon-time
-        = "10:00～24:00※24時にコースは終了"
+        = @place.shop_hour
       p
         span.glyphicon.glyphicon-credit-card
-        = "Visa,Master,JCB,AMEX"
+        = @place.credit_cards
       p
         span.glyphicon.glyphicon-tags
-        = "ホーチミン,市民劇場・ドンコイエリア,立地抜群,贅沢・高級,クーポン,カップル,女子旅,サウナ,日本語対応"
+        = @place.keywords
   
   
 
-.row.box
-  .place_body_left.col-lg-8
-    h2 店舗メニュー
-    .line
-    -(0..2).each do ||
-      .place_item.row
-        .item_img.col-md-5 style="background-image: url(/banner675x355/2018817194851593.jpg)"
-        .item_content.col-md-7
-          .item_title
-            h2 = "笑みコース（4時間）"
-            h4 = "Emi Course(4h)"
-          .item_text
-            .item_des
-              = "エミスパのフルコース・パッケージ。半日かけて肩こり、アンチエイジング、フットケアを行う贅沢なコース。ホーチミン観光のハイライトとして最後にとっておくのはいかがでしょうか。女子旅でもカップルでも一生の思い出になること間違いありません。"
+/ .row.box
+/   .place_body_left.col-lg-8
+/     h2 店舗メニュー
+/     .line
+/     -(0..2).each do ||
+/       .place_item.row
+/         .item_img.col-md-5 style="background-image: url(/banner675x355/2018817194851593.jpg)"
+/         .item_content.col-md-7
+/           .item_title
+/             h2 = "笑みコース（4時間）"
+/             h4 = "Emi Course(4h)"
+/           .item_text
+/             .item_des
+/               = "エミスパのフルコース・パッケージ。半日かけて肩こり、アンチエイジング、フットケアを行う贅沢なコース。ホーチミン観光のハイライトとして最後にとっておくのはいかがでしょうか。女子旅でもカップルでも一生の思い出になること間違いありません。"
 
-              .box_item
-                h3 コース内容
-                = "1．サウナ"
-                br
-                = "2．痛みの緩和マッサージ"
-                br
-                ="3．コラーゲンパックでアンチエイジング"
-                br
-                ="4．ホットストーン・フットマッサージ"
-                br
-                ="5．パラフィンセラピー（手or足）"
-                br
-                ="6．マニキュアorペディキュア"
-      .line
+/               .box_item
+/                 h3 コース内容
+/                 = "1．サウナ"
+/                 br
+/                 = "2．痛みの緩和マッサージ"
+/                 br
+/                 ="3．コラーゲンパックでアンチエイジング"
+/                 br
+/                 ="4．ホットストーン・フットマッサージ"
+/                 br
+/                 ="5．パラフィンセラピー（手or足）"
+/                 br
+/                 ="6．マニキュアorペディキュア"
+/       .line
 
 
-  .place_body_right.dotted-left.col-lg-4.col-xs-12
+/   .place_body_right.dotted-left.col-lg-4.col-xs-12

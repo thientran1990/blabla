@@ -10,13 +10,62 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180827081802) do
+ActiveRecord::Schema.define(version: 20180914083553) do
+
+  create_table "areas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+    t.integer  "city_id",                null: false
+    t.string   "ja_name",                null: false
+    t.string   "en_name",                null: false
+    t.integer  "position",   default: 1, null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.index ["city_id"], name: "index_areas_on_city_id", using: :btree
+    t.index ["position"], name: "index_areas_on_position", using: :btree
+  end
+
+  create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+    t.string   "ja_name",                null: false
+    t.string   "en_name",                null: false
+    t.integer  "position",   default: 1, null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.index ["position"], name: "index_categories_on_position", using: :btree
+  end
+
+  create_table "cities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+    t.string   "ja_name",                null: false
+    t.string   "en_name",                null: false
+    t.integer  "position",   default: 1, null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.index ["position"], name: "index_cities_on_position", using: :btree
+  end
+
+  create_table "districts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+    t.integer  "city_id",                null: false
+    t.string   "ja_name",                null: false
+    t.string   "en_name",                null: false
+    t.string   "vn_name",                null: false
+    t.integer  "position",   default: 1, null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.index ["city_id"], name: "index_districts_on_city_id", using: :btree
+    t.index ["position"], name: "index_districts_on_position", using: :btree
+  end
+
+  create_table "place_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+    t.string   "place_id"
+    t.integer  "image_size"
+    t.string   "image_uid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "places", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.string   "ja_name",                                      null: false
     t.string   "ja_kana",                                      null: false
     t.string   "en_name",                                      null: false
-    t.string   "url_name",                                     null: false
+    t.string   "slug",                                         null: false
     t.integer  "category_id",                                  null: false
     t.text     "description",    limit: 65535
     t.integer  "city_id",                                      null: false
@@ -45,6 +94,23 @@ ActiveRecord::Schema.define(version: 20180827081802) do
     t.boolean  "published",                    default: false, null: false
     t.datetime "created_at",                                   null: false
     t.datetime "updated_at",                                   null: false
+    t.index ["area_id"], name: "index_places_on_area_id", using: :btree
+    t.index ["category_id"], name: "index_places_on_category_id", using: :btree
+    t.index ["city_id"], name: "index_places_on_city_id", using: :btree
+    t.index ["district_id"], name: "index_places_on_district_id", using: :btree
+    t.index ["en_address"], name: "index_places_on_en_address", using: :btree
+    t.index ["en_name"], name: "index_places_on_en_name", using: :btree
+    t.index ["ja_address"], name: "index_places_on_ja_address", using: :btree
+    t.index ["ja_kana"], name: "index_places_on_ja_kana", using: :btree
+    t.index ["ja_name"], name: "index_places_on_ja_name", using: :btree
+    t.index ["keywords"], name: "index_places_on_keywords", using: :btree
+    t.index ["latitude"], name: "index_places_on_latitude", using: :btree
+    t.index ["longitude"], name: "index_places_on_longitude", using: :btree
+    t.index ["prior"], name: "index_places_on_prior", using: :btree
+    t.index ["vi_address"], name: "index_places_on_vi_address", using: :btree
+    t.index ["views"], name: "index_places_on_views", using: :btree
+    t.index ["views_in_month"], name: "index_places_on_views_in_month", using: :btree
+    t.index ["views_in_week"], name: "index_places_on_views_in_week", using: :btree
   end
 
 end

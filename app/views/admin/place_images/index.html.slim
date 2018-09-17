@@ -1,0 +1,11 @@
+h1 place image
+/ = params[]
+= form_for admin_place_images_path() do |f|
+  .form-group
+    .row
+      .col-md-3.text-right
+      .col-md-8
+        = f.file_field :image
+
+  .actions = f.submit '保存する', class: 'btn btn-primary'
+

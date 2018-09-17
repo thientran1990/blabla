@@ -16,7 +16,7 @@ body
   .dotted-bottom
     border-bottom: dotted #e7e7e7
     margin: 10px 0px
-    
+
   .dotted-left
     border-left: dotted #e7e7e7
   .box_item
@@ -76,7 +76,7 @@ body
 
     #left_bar
       // background-color: gray
-      border-right: dotted #e7e7e7
+      @extend .dotted-right
       .category_menu
         display: block
         padding: 10px 0 10px 8px
@@ -189,8 +189,7 @@ body
               padding: 10px
       //show place
       .place_info_img
-        padding-left: 10px
-        padding-right: 0
+        padding: 0 10px
         .place_img
           background-repeat: no-repeat
           background-size: cover

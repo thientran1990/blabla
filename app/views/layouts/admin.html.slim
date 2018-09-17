@@ -1,0 +1,16 @@
+doctype html
+html lang="en"
+  head
+    title Mainichi Spa - Admin
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  body.admin
+    #container.row
+      #left_bar.col-lg-2
+        .box
+          h2.category_title Admin
+          = link_to "Place" , admin_places_path 
+      #main.col-lg-10
+        h2 admin
+        = yield
