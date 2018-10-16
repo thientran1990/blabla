@@ -1,3 +1,5 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+jQuery ->
+  $('#admin_place_fileupload').fileupload
+    dataType: 'json'
+    done: (e, data) ->
+      $('ul.guide_content_images').append(data.result.html)

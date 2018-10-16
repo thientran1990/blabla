@@ -1,0 +1,123 @@
+h1= @place.ja_name
+
+.row
+  .place_body_left.col-md-8
+    h2= t("basic infomation")
+    table.table.table-striped
+      tbody
+        tr
+          th= t("Japan name")
+          td
+            = @place.ja_name
+        tr
+          th= t("Kana name")
+          td
+            = @place.ja_kana
+        tr
+          th= t("En name")
+          td
+            = @place.en_name
+        tr
+          th= t("Category")
+          td
+            = @place.category_id
+        tr
+          th= t("Key words")
+          td
+            = @place.keywords
+        tr
+          th= t("Tel")
+          td
+            = @place.tel
+        tr
+          th= t("Email")
+          td
+            = @place.email
+        tr
+          th= t("Description")
+          td
+            = @place.description
+    h2= t("local infomation")
+    table.table.table-striped
+      tbody
+        tr
+          th= t("City")
+          td
+            = @place.category_id
+          th= t("District")
+          td
+            = @place.district_id
+          th= t("Area")
+          td
+            = @place.area_id
+        tr
+          th= t("Japan address")
+          td
+            = @place.ja_address
+        tr
+          th= t("English address")
+          td
+            = @place.en_address
+        tr
+          th= t("Vietnamese address")
+          td
+            = @place.vi_address
+        tr
+          th= t("Latitude")
+          td
+            = @place.latitude
+          th= t("Longitude")
+          td
+            = @place.longitude
+
+        tr
+          th= t("Url")
+          td
+            = @place.url
+        tr
+          th= t("access")
+          td
+            = @place.access
+        / tr
+        /   th= t("Created date")
+        /   td= @place.created_at.to_s(:datetime)
+    h2= t('Business hours etc.')
+    table.table.table-striped
+      tbody
+
+        tr
+          th= t("Shop hour")
+          td
+            = @place.shop_hour
+        tr
+          th= t("holiday")
+          td
+            = @place.holiday
+  .place_body_right.dotted-left.col-lg-4
+    - guide_image = @place.place_images.build
+    / = form_for guide_image, url: admin_place_images_path(@place),
+    /   multipart: true, html: { id: :admin_place_fileupload, class: 'fileupload' } do |f|
+    /   span.btn.btn-default.fileupload-button
+    /     | Drop image or click to upload
+    /     = f.file_field :file
+
+    .place_img style="background-repeat: no-repeat;background-size: cover;background-position: center;height: 300px ; background-image: url(#{@place.image}"
+
+    = form_for guide_image, url: admin_place_images_path(@place.id) do |f|
+      .form-group
+        .row
+          .col-md-3.text-right
+          .col-md-8
+            = f.file_field :file
+
+      .actions = f.submit '保存する', class: 'btn btn-primary'
+    ul.guide_content_images
+      - @place.place_images.all.each do |images|
+        li.image
+          = link_to image_tag(images.image.url), class: 'img-thumbnail'
+          .image_navi
+            = link_to 'delete', admin_place_image_path(@place, images),
+              remote: true, method: :delete, data: { confirm: '本当に削除しますか？' }
+            = link_to 'change image', admin_place_change_image_path(@place,image_id: images)
+
+    / = link_to "並べ替えた順番で再表示する", admin_place_images_path(@place), class: 'btn btn-link'

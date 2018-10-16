@@ -1,11 +1,23 @@
 h1 place image
 / = params[]
-= form_for admin_place_images_path() do |f|
+p = admin_place_images_path
+p = [:admin]
+- guide_image = @place.place_images.build
+
+= form_for admin_place_images_path(params[:place_id]) do |f|
   .form-group
     .row
       .col-md-3.text-right
       .col-md-8
-        = f.file_field :image
+        = f.file_field :file
 
+  .actions = f.submit '保存する', class: 'btn btn-primary'
+
+= form_for guide_image, url: admin_place_images_path(params[:place_id]) do |f|
+  .form-group
+    .row
+      .col-md-3.text-right
+      .col-md-8
+        = f.file_field :file
   .actions = f.submit '保存する', class: 'btn btn-primary'
 

@@ -1,0 +1,15 @@
+#content.one-column
+  h1 お探しのエリアが見つかりませんでした
+  p
+    | お探しのエリアが移動もしくは削除された可能性があります。
+  h2 エリアの一覧から他のエリアを選択してください
+  .all_areas
+    = render partial: 'layouts/areas/countries'
+  p
+    a href='javascript:history.back();'
+      i.glyphicon.glyphicon-arrow-right
+      | 1つ前のページに戻る
+    br
+    a href='https://traveloco.jp/'
+      i.glyphicon.glyphicon-arrow-right
+      | トップページに戻る

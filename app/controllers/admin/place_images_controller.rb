@@ -1,35 +1,40 @@
 class Admin::PlaceImagesController < ApplicationController
+  before_action :set_place
   layout 'admin'
   def index
-    # @place = Place.all
+    @images = @place.place_images.all
   end
 
-  def new
-    @image = PlaceImage.new
-  end
   def create
-    @image = PlaceImage.new(place_params)
-
+    @image = @place.place_images.build(image: image_params[:file])
     if @image.save
-      flash[:success] = "Photo saved!"
-    else
-      render :new
+      redirect_to admin_place_path(@place.slug), notice: 'コメント内容を更新しました'
     end
-    # respond_to do |format|
-    #   if @image.save
-    #     # format.html { redirect_to new_admin_place_path(@place), notice: 'Place was successfully created.' }
-    #     flash[:success] = "Photo saved!"
-    #     # format.json { render action: 'show', status: :created, location: @place }
-    #   else
-    #     format.html { render action: 'new' }
-    #     # format.json { render json: @place.errors, status: :unprocessable_entity }
-    #   end
-    # end
+  end
+
+  def destroy
+    @image = PlaceImage.find_by(id: params[:id])
+    @image.destroy
+    redirect_to admin_place_path(@place), notice: 'コメント内容を更新しました'  
+  end
+
+  def change_image
+    @place.update_column(@place.image_id, params[:image_id])
   end
 
   private
 
-    def place_params
-      params.require(:images).permit(:image)
-    end
+  def set_place
+    @place = Place.find_by(id: params[:place_id])
+    # render_not_found if @place.blank?
+
+  end
+
+  def image_params
+    params.require(:place_image).permit(:file)
+  end
+
+  def object_params
+
+  end
 end

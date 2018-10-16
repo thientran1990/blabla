@@ -33,28 +33,50 @@
     .form-group
       .row
         .col-md-3.text-right
+          = f.label :keywords
+        .col-md-8
+          = f.text_field :keywords, class: 'form-control'
+    .form-group
+      .row
+        .col-md-3.text-right
+          = f.label :tel
+        .col-md-8
+          = f.text_field :tel, class: 'form-control'
+    .form-group
+      .row
+        .col-md-3.text-right
+          = f.label :email
+        .col-md-8
+          = f.text_field :email, class: 'form-control'
+    .form-group
+      .row
+        .col-md-3.text-right
           = f.label :description
         .col-md-8
-          = f.text_field :description, class: 'form-control'
+          = f.text_area :description, class: 'form-control'
+    / .form-group
+    /   .row
+    /     .col-md-3.text-right
+    /       = f.label :copy
+    /     .col-md-8
+    /       = f.text_field :copy, class: 'form-control'
   fieldset
     legend = 'local infomation'
     .form-group
       .row
-        .col-md-4
-          = f.label :city_id, class: 'col-md-3 control-label'
-          = f.select :city_id, City.all.map{|city| [ t(city.en_name), city.id ] },
-            include_blank: true
-        .col-md-4
-          = f.label :district_id, class: 'col-md-3 control-label'
-          = f.select :district_id, District.all.map{|district| [ t(district.en_name), district.id ] },
-            include_blank: true
-        .col-md-4
-          = f.label :area_id, class: 'col-md-3 control-label'
-          = f.select :area_id, Area.all.map{|area| [ t(area.en_name), area.id ] },
-            include_blank: true
-
-
-
+        .col-md-offset-3
+          .col-md-4
+            = f.label :city_id, class: 'col-md-3 control-label'
+            = f.select :city_id, City.all.map{|city| [ t(city.en_name), city.id ] },
+              include_blank: true
+          .col-md-4
+            = f.label :district_id, class: 'col-md-3 control-label'
+            = f.select :district_id, District.all.map{|district| [ t(district.en_name), district.id ] },
+              include_blank: true
+          .col-md-4
+            = f.label :area_id, class: 'col-md-3 control-label'
+            = f.select :area_id, Area.all.map{|area| [ t(area.en_name), area.id ] },
+              include_blank: true
     .form-group
       .row
         .col-md-3.text-right
@@ -82,20 +104,6 @@
         .col-sm-4
           = f.text_field :longitude, class: 'form-control'
 
-
-
-    .form-group
-      .row
-        .col-md-3.text-right
-          = f.label :keywords
-        .col-md-8
-          = f.text_field :keywords, class: 'form-control'
-    .form-group
-      .row
-        .col-md-3.text-right
-          = f.label :tel
-        .col-md-8
-          = f.text_field :tel, class: 'form-control'
     .form-group
       .row
         .col-md-3.text-right
@@ -108,53 +116,55 @@
           = f.label :access
         .col-md-8
           = f.text_field :access, class: 'form-control'
-    .form-group
-      .row
-        .col-md-3.text-right
-          = f.label :seats
-        .col-md-8
-          / = f.text_field :category_id, class: 'form-control'
-    .form-group
-      .row
-        .col-md-3.text-right
-          = f.label :booking
-        .col-md-8
-          / = f.text_field :description, class: 'form-control'
-    .form-group
-      .row
-        .col-md-3.text-right
-          = f.label :smoking
-        .col-md-8
-          / = f.text_field :city_id, class: 'form-control'
-    .form-group
-      .row
-        .col-md-3.text-right
-          = f.label :credit_cards
-        .col-md-8
-          / = f.text_field :district_id, class: 'form-control'
+    / .form-group
+    /   .row
+    /     .col-md-3.text-right
+    /       = f.label :seats
+    /     .col-md-8
+    /       = f.text_field :category_id, class: 'form-control'
+    / .form-group
+    /   .row
+    /     .col-md-3.text-right
+    /       = f.label :booking
+    /     .col-md-8
+    /       = f.text_field :description, class: 'form-control'
+    / .form-group
+    /   .row
+    /     .col-md-3.text-right
+    /       = f.label :smoking
+    /     .col-md-8
+    /       = f.text_field :city_id, class: 'form-control'
+    / .form-group
+    /   .row
+    /     .col-md-3.text-right
+    /       = f.label :credit_cards
+    /     .col-md-8
+    /       = f.text_field :district_id, class: 'form-control'
+  fieldset
+    legend = t('Business hours etc.')
     .form-group
       .row
         .col-md-3.text-right
           = f.label :shop_hour
         .col-md-8
-          / = f.text_field :vi_address, class: 'form-control'
+          = f.text_field :shop_hour, class: 'form-control'
     .form-group
       .row
         .col-md-3.text-right
           = f.label :holiday
         .col-md-8
-          / = f.text_field :ja_address, class: 'form-control'
-    .form-group
+          = f.text_field :holiday, class: 'form-control'
+    / .form-group
       .row
         .col-md-3.text-right
           = f.label :image_id
         .col-md-8
-          / = f.text_field :en_address, class: 'form-control'
-    .form-group
-      .row
-        .col-md-3.text-right
-          = f.label :published
-        .col-md-8
-          / = f.text_field :latitude, class: 'form-control'
+          = f.text_field :en_address, class: 'form-control'
+    / .form-group
+    /   .row
+    /     .col-md-3.text-right
+    /       = f.label :published
+    /     .col-md-8
+    /       = f.text_field :latitude, class: 'form-control'
 
   .actions = f.submit '保存する', class: 'btn btn-primary'

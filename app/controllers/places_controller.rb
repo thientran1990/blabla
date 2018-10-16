@@ -11,10 +11,6 @@ class PlacesController < ApplicationController
 
   end
 
-  def edit
-    
-  end
-  
   private
 
     def set_place

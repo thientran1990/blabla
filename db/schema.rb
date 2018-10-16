@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180914083553) do
+ActiveRecord::Schema.define(version: 20181003065524) do
 
   create_table "areas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.integer  "city_id",                null: false
@@ -57,8 +57,9 @@ ActiveRecord::Schema.define(version: 20180914083553) do
     t.string   "place_id"
     t.integer  "image_size"
     t.string   "image_uid"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "positions",  default: 0, null: false
   end
 
   create_table "places", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
@@ -94,6 +95,7 @@ ActiveRecord::Schema.define(version: 20180914083553) do
     t.boolean  "published",                    default: false, null: false
     t.datetime "created_at",                                   null: false
     t.datetime "updated_at",                                   null: false
+    t.string   "email"
     t.index ["area_id"], name: "index_places_on_area_id", using: :btree
     t.index ["category_id"], name: "index_places_on_category_id", using: :btree
     t.index ["city_id"], name: "index_places_on_city_id", using: :btree

@@ -9,8 +9,9 @@ html lang="en"
     #container.row
       #left_bar.col-lg-2
         .box
-          h2.category_title Admin
-          = link_to "Place" , admin_places_path 
+          h2.category_title
+            = link_to 'Admin', admin_path
+          = link_to "Place" , admin_path 
       #main.col-lg-10
         h2 admin
         = yield

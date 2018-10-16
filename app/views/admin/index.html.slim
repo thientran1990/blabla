@@ -1,2 +1,15 @@
-h1 Admin#index
-p Find me in app/views/admin/index.html.slim
+h1 Admin
+= link_to "New Place", new_admin_place_path
+h2 list places
+table.table.table-striped
+  thead
+    th #
+    th =t("English name")
+    th =t("Slug")
+  - @places.each_with_index do |place, index|
+    tr
+      td.num= index + 1
+      td = link_to place.en_name, place_path(place.slug)
+      td = link_to place.slug, admin_place_path(place.slug)
+      td = link_to t("Edit"), edit_admin_place_path(place.slug)
+      td = link_to t("delete"), admin_place_path(place.slug), method: :delete, data: { confirm: '本当に削除しますか？' }

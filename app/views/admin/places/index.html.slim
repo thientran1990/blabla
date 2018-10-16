@@ -9,3 +9,4 @@ table.table.table-striped
       td = place.ja_name
       td = place.slug
       / td.text-right= place.en_name
+    = link_to t("Edit"), edit_admin_place_path(place.slug)
